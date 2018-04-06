@@ -8,6 +8,13 @@ namespace JOS.Epi.ContentApi.Internal
 {
     public class DefaultShouldSerializeResponseStrategy : IShouldSerializeResponseStrategy
     {
+        private readonly ISupportedAcceptTypesStrategy _supportedAcceptTypesStrategy;
+
+        public DefaultShouldSerializeResponseStrategy(ISupportedAcceptTypesStrategy supportedAcceptTypesStrategy)
+        {
+            _supportedAcceptTypesStrategy = supportedAcceptTypesStrategy ?? throw new ArgumentNullException(nameof(supportedAcceptTypesStrategy));
+        }
+
         public bool Execute(HttpRequest request)
         {
             if (request.Url.IsFile || HasFileExtension(request.Path))
@@ -16,8 +23,7 @@ namespace JOS.Epi.ContentApi.Internal
             }
 
             var acceptHeaders = request.AcceptTypes ?? Array.Empty<string>();
-            var supportedAcceptTypesStrategy = ServiceLocator.Current.GetInstance<ISupportedAcceptTypesStrategy>();
-            var supportedAcceptTypes = supportedAcceptTypesStrategy.Execute();
+            var supportedAcceptTypes = this._supportedAcceptTypesStrategy.Execute();
             return acceptHeaders.Length == 1 && supportedAcceptTypes.Contains(acceptHeaders.First(), StringComparer.OrdinalIgnoreCase);
         }
 
