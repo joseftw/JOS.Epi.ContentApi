@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>JOS.Epi.ContentApi</id>
+    <version>$version$</version>
+    <authors>Josef Ottosson</authors>
+    <description>A library that enables you to use Episerver as a headless API, without Find.</description>
+    <language>en-US</language>
+    <projectUrl>https://github.com/joseftw/JOS.Epi.ContentApi</projectUrl>
+    <releaseNotes>
+      First release
+    </releaseNotes>
+    <tags>episerver json serialize headless</tags>
+  </metadata>
+</package>
