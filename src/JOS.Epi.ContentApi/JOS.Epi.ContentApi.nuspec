@@ -12,4 +12,8 @@
     </releaseNotes>
     <tags>episerver json serialize headless</tags>
   </metadata>
+  <files>
+    <file src="web.config.install.xdt" target="content\web.config.install.xdt"/>
+    <file src="web.config.uninstall.xdt" target="content\web.config.uninstall.xdt"/>
+  </files>
 </package>

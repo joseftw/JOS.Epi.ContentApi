@@ -174,7 +174,8 @@
   <ItemGroup>
     <None Include="JOS.Epi.ContentApi.nuspec" />
     <None Include="packages.config" />
-    <None Include="Web.config.transform" />
+    <None Include="web.config.uninstall.xdt" />
+    <None Include="web.config.install.xdt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
