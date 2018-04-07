@@ -1,6 +1,10 @@
 # JOS.Epi.ContentApi
 Headless Episerver API without find and with pretty urls.
 
+## DEMO
+
+![](https://josefottosson.se/content/images/2018/04/JOS.Epi.ContentApi.gif)
+
 ## How to use it
 
 1. ```Install-Package Jos.Epi.ContentApi```(Normal nuget, not episerver feed)
