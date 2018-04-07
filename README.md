@@ -27,7 +27,6 @@ The module works like this:
 
 You can swap out the following interfaces
 
-* ```IShouldSerializeResponseStrategy``` - Responsible for deciding if the response should be serialized.
-* ```ISupportedAcceptTypesStrategy``` - Decides which accept types you support, default is ```application/json```.
-* ```IContentApiSerializer``` - Which serializer to use, default uses [JOS.ContentSerializer](https://github.com/joseftw/JOS.ContentSerializer).
-
+* ```IShouldSerializeResponseStrategy``` - Responsible for deciding if the response should be serialized. Uses [DefaultShouldSerializeResponseStrategy](https://github.com/joseftw/JOS.Epi.ContentApi/blob/develop/src/JOS.Epi.ContentApi/Internal/DefaultShouldSerializeResponseStrategy.cs) by default
+* ```ISupportedAcceptTypesStrategy``` - Decides which accept types you support, default is ```application/json```. Uses [DefaultSupportedAcceptTypesStrategy](https://github.com/joseftw/JOS.Epi.ContentApi/blob/develop/src/JOS.Epi.ContentApi/Internal/DefaultSupportedAcceptTypesStrategy.cs) by default.
+* ```IContentApiSerializer``` - Decides which serializer to use. Uses [DefaultContentApiSerializer](https://github.com/joseftw/JOS.Epi.ContentApi/blob/develop/src/JOS.Epi.ContentApi/Internal/DefaultContentApiSerializer.cs) by default which itself uses [JOS.ContentSerializer](https://github.com/joseftw/JOS.ContentSerializer).
