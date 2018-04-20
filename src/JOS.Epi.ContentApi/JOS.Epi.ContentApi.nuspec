@@ -8,7 +8,7 @@
     <language>en-US</language>
     <projectUrl>https://github.com/joseftw/JOS.Epi.ContentApi</projectUrl>
     <releaseNotes>
-      First release
+      Changes target framework to 4.6.1
     </releaseNotes>
     <tags>episerver json serialize headless</tags>
   </metadata>
