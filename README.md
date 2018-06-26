@@ -7,16 +7,10 @@ Headless Episerver API without find and with pretty urls.
 ## How to use it
 
 1. ```Install-Package JOS.Epi.ContentApi```(Normal nuget, not episerver feed)
-    **Note:** When the package gets installed, a transform to your web.config will be applied and add the following line:
-```<add name="ContentApiModule" type="JOS.Epi.ContentApi.ContentApiModule, JOS.Epi.ContentApi" />```
-If it doesn't work, add it yourself at ```/configuration/system.webServer/modules/```
 2. Set your accept header to "application/json" and make a GET request to your desired page.
 3. Profit.
 
 ## How does it work?
-The package adds a HttpModule that listens on all requests.
-The module works like this:
-
 1. Gets the current ```IShouldSerializeResponseStrategy``` and executes it.
 2. If ```IShouldSerializeResponseStrategy``` returns false, the module returns.
 3. If ```IShouldSerializeResponseStrategy``` returns true we get the current ```IUrlResolver``` and tries to route the current path and map it to ```IContent```.
