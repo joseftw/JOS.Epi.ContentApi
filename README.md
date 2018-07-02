@@ -2,7 +2,7 @@
 Headless Episerver API without find and with pretty urls.
 
 ## DEMO
-![](https://josefottosson.se/content/images/2018/04/JOS.Epi.ContentApi.gif)
+https://www.youtube.com/watch?v=cnqB4EQgSy0
 
 ## How to use it
 
